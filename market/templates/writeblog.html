@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+<center>
+<div class="col-md-6 col-lg-8"" style="background-color:#343a40!important;
+box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+      <form method="POST" class="form-signin" style="color:white">
+        {{ form.hidden_tag() }}
+        <!-- <img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt=""> -->
+        <h1 class="h3 mb-3 font-weight-normal">
+            Write A Blog Your Blog
+        </h1>
+        <br>
+        {{ form.blog_title.label() }}
+        {{ form.blog_title(class="form-control", placeholder="Blog Title") }}
+
+        {{ form.blog_content.label() }}
+        {{ form.blog_content(class="form-control", placeholder="Blog Content") }}
+        <input type="hidden"  name="time" id="time" value="{{localtime}}">
+        <br>
+
+        {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        
+    </form>
+
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+<center>
+<div class="col-md-6 col-lg-8"" style="background-color: #343a40!important;
+box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+{% for blo in blogs %}
+<p> <span style="font-size: 4ch;margin-right:10px;margin-bottom:0;">{{ blo.name }}</span>  on {{ blo.time }}</p>
+<p> <span style="font-size: 4ch;">{{ blo.blog_title }}</span></p>
+<p><span  style="margin-top:0">{{ blo.blog_content }}</span></p>
+
+
+{% endfor %}   
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+<center>
+<div class="col-md-6 col-lg-8"" style="background-color: #343a40!important;
+box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+<form action="/editblog/{{blo.id}}/" method="POST">
+    <label for="Blog Title">Blog Title</label>
+    <input id="blog_title" class="form-control" value="{{blo.blog_title}}" name="blog_title">
+    <label for="Blog Content">Blog Content</label>
+    <input id="blog_content" class="form-control" value="{{blo.blog_content}}" name="blog_content">
+    <input type="submit" class="btn btn-outline btn-success" value="Save" >
+</form>
+</div>
+</center>
+
+{% endblock %}
